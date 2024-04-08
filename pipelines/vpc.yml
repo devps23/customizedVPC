@@ -6,13 +6,13 @@ pipelines:
     lock_behavior: none
     display_order: -1
     materials:
-      git-2ae7d73:
+      git-36bac2c:
         git: https://github.com/devps23/customizedVPC.git
         shallow_clone: false
         auto_update: true
         branch: main
     stages:
-    - test-stage:
+    - vpc:
         fetch_materials: true
         keep_artifacts: false
         clean_workspace: false
@@ -20,12 +20,11 @@ pipelines:
           type: success
           allow_only_on_success: false
         jobs:
-          test-job:
+          vpc-job:
             timeout: 0
             tasks:
-            - exec: { command: ansible-playbook,  arguments: ["-i", "172.31.3.3,", "vpc.yml", "-e", "ansible_user=ec2-user",
-            "-e", "ansible_password=DevOps321" ], run_if: passed }
-
-
-
-
+            - exec:
+                arguments:
+                - vpc.yml
+                command: ansible-playbook
+                run_if: passed
