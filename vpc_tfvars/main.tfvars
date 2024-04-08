@@ -1,4 +1,4 @@
-ami  = "ami-05f020f5935e52dc4"
+ami  = "ami-090252cbe067a9e58"
 instancetype    = "t3.small"
 instancename    = "demo4"
 
