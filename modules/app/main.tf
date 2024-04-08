@@ -39,8 +39,8 @@ resource "aws_route_table" "router" {
     Name = var.routename
   }
 }
-resource "aws_route" "vpc_edit_route" {
-  route_table_id = aws_route_table.router.vpc_id
+resource "aws_route" "editroute" {
+  route_table_id = aws_route.editroute.route_table_id
   destination_cidr_block     = var.cidr_block
   vpc_peering_connection_id = aws_vpc_peering_connection.peer.peer_vpc_id
 }
