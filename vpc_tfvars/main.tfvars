@@ -9,6 +9,7 @@ peer_conn = "peer_dev"
 routename = "route"
 default_vpc_cidr_block= "172.31.0.0/16"
 default_route_table_id="rtb-0af558ba20b58a676"
+default_peerConn = "pcx-04007ddaacb9d7c26"
 
 
 
