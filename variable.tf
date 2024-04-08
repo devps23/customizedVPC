@@ -1,2 +1,2 @@
-variable "instance_name"{}
-variable "ami_id"{}
+variable "ami"{}
+variable "instancetype"{}
