@@ -6,7 +6,7 @@ vpc_name = "vpc-dev"
 subnet_name="zone1"
 default_vpc_id = "vpc-0b755f89eb21ea6c9"
 peer_conn = "peer_dev"
-
+routename = "route"
 
 
 
