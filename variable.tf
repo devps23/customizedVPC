@@ -4,3 +4,5 @@ variable "instancename"{}
 variable "vpc_cidr_block" {}
 variable "vpc_name" {}
 variable "subnet_name"{}
+variable "default_vpc_id" {}
+variable "peer_conn" {}
