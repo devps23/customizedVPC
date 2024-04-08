@@ -39,3 +39,8 @@ resource "aws_route_table" "route" {
     Name = var.routename
   }
 }
+//resource "aws_vpc" "test" {
+//  cidr_block = var.cidr_block
+//  route_peer_connection = aws_vpc_peering_connection.peer.peer_vpc_id
+//
+//}
