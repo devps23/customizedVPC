@@ -24,7 +24,8 @@ pipelines:
             timeout: 0
             tasks:
               command: ansible-playbook
-              - exec:{ arguments: pipelines/vpc.yml , run_if: passed }
+            - exec:
+                arguments:
+                - vpc.yml
 
-
-
+                run_if: passed
