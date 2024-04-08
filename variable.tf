@@ -1,3 +1,3 @@
 variable "ami"{}
 variable "instancetype"{}
-variable "instancename" {}
+variable "instancename"{}

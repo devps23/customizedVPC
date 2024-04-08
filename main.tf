@@ -7,4 +7,7 @@ module "vpc_test" {
  instance_type = var.instancetype
   instancename = var.instancename
 
+
+
+
 }
