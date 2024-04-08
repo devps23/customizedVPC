@@ -9,3 +9,9 @@ resource "aws_instance" "test" {
 data "aws_security_group" "security"{
   name = "allow-all"
 }
+resource "aws_vpc" "vpc" {
+  cidr_block       = var.cidr_block
+  tags = {
+    Name = var.vpcname
+  }
+}
