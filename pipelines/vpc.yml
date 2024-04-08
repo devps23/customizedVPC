@@ -23,7 +23,7 @@ pipelines:
           test-job:
             timeout: 0
             tasks:
-            - exec: { command: ansible-playbook,  arguments: "vpc.yml", run_if: passed }
+            - exec: { command: ansible-playbook,  arguments: vpc.yml, run_if: passed }
 
 
 
