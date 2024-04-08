@@ -42,10 +42,10 @@ resource "aws_route_table" "router" {
 resource "aws_route" "vpc_edit_route" {
   route_table_id = aws_route_table.router.vpc_id
   cidr_block = var.cidr_block
-  route_peer_connection = aws_vpc_peering_connection.peer.peer_vpc_id
+  vpc_peering_connection_id = aws_vpc_peering_connection.peer.peer_vpc_id
 }
-resource "aws_vpc" "default_edit_route" {
-  route_id = aws_route_table.router.vpc_id
-  cidr_block = var.default_vpc_cidr_block
-  route_peer_connection = aws_vpc_peering_connection.peer.peer_vpc_id
-}
+//resource "aws_vpc" "default_edit_route" {
+//  route_id = aws_route_table.router.vpc_id
+//  cidr_block = var.default_vpc_cidr_block
+//  route_peer_connection = aws_vpc_peering_connection.peer.peer_vpc_id
+//}
