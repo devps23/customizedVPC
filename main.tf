@@ -5,5 +5,6 @@ module "vpc_test" {
 //  subnetname = var.vpc_Subnetname
   ami = var.ami
  instance_type = var.instancetype
+  instancename = var.instancename
 
 }
