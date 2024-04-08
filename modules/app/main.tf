@@ -23,7 +23,7 @@ resource "aws_subnet" "subnet_dev" {
     Name = var.subnet_name
   }
 }
-resource "aws_vpc_peering_connection" "peer_dev" {
+resource "aws_vpc_peering_connection" "peer" {
   peer_vpc_id   = var.requester_vpc_id
   vpc_id        = aws_vpc.vpc.id
   auto_accept   = true
