@@ -47,5 +47,5 @@ resource "aws_route" "default_editroute" {
 resource "aws_route" "cust_editroute" {
   route_table_id = aws_vpc.vpc.default_route_table_id
   destination_cidr_block     = var.default_vpc_cidr_block
-  vpc_peering_connection_id = aws_vpc_peering_connection.peer.peer_vpc_id
+  vpc_peering_connection_id = aws_vpc_peering_connection.peer.id
 }
