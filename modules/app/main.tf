@@ -15,3 +15,11 @@ resource "aws_vpc" "vpc" {
     Name = var.vpcname
   }
 }
+resource "aws_subnet" "subnet_dev" {
+  vpc_id     = aws_vpc.vpc.id
+  cidr_block = var.cidr_block
+
+  tags = {
+    Name = var.subnet_name
+  }
+}
