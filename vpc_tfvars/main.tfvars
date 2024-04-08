@@ -8,6 +8,7 @@ default_vpc_id = "vpc-0b755f89eb21ea6c9"
 peer_conn = "peer_dev"
 routename = "route"
 default_vpc_cidr_block= "172.31.0.0/16"
+default_route_table_id="rtb-0af558ba20b58a676"
 
 
 

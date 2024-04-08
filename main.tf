@@ -10,6 +10,6 @@ module "vpc" {
   peer_conn = var.peer_conn
   routename = var.routename
   default_vpc_cidr_block=var.default_vpc_cidr_block
-
+  default_route_table_id=var.default_route_table_id
 }
 
