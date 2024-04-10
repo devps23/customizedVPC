@@ -41,17 +41,21 @@ resource "aws_route_table" "router" {
 }
 resource "aws_route" "default_editroute" {
 //  default routetableid
-  route_table_id = var.default_route_table_id
+  route_table_id = var.default_route_table_id//rtb--
   //custom_Cidr_block
-  destination_cidr_block     = var.cidr_block
+  destination_cidr_block     = var.cidr_block//10.10.0.0
   //peerconnection
-  vpc_peering_connection_id =  aws_vpc_peering_connection.peer.id
+  vpc_peering_connection_id =  aws_vpc_peering_connection.peer.id//custom
 }
 resource "aws_route" "cust_editroute" {
   //resource routetable id
   route_table_id = aws_vpc.vpc.default_route_table_id
 // for aws route table id with default vpc  peer connection
   destination_cidr_block     = var.default_vpc_cidr_block
-  vpc_peering_connection_id = aws_vpc_peering_connection.peer.id
+  vpc_peering_connection_id = "pcx-04007ddaacb9d7c26"
+}
+
+output "custompeer" {
+  value = aws_vpc_peering_connection.peer.id
 }
 
