@@ -12,6 +12,16 @@ variable "default_route_table_id" {}
 variable "default_peerConn" {}
 
 
+output "peer_conn" {
+  value = var.peer_conn
+}
+output "default_peerConn" {
+  value = var.default_peerConn
+}
+
+
+
+
 
 
 
