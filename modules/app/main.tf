@@ -55,5 +55,9 @@ resource "aws_route" "cust_editroute" {
 
 output "custompeer" {
   value = aws_vpc_peering_connection.peer.id
+
+}
+output "custom_routeID" {
+  value = aws_vpc.vpc.default_route_table_id
 }
 
