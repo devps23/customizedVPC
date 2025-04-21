@@ -2,9 +2,9 @@ resource "aws_eks_cluster" "cluster" {
   name     = "${var.env}-eks"
   role_arn = aws_iam_role.cluster-role.arn
 
-  vpc_config {
-    subnet_ids = var.subnet_id
-  }
+#   vpc_config {
+#     subnet_ids = var.subnet_id
+#   }
 
   encryption_config {
     provider {
